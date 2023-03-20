@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mynav"
+    app:startDestination="@id/fragment_home">
+
+    <fragment
+        android:id="@+id/fragment_home"
+        android:name="com.robert.labb2.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_aboutFragment"
+            app:destination="@id/fragment_about" />
+        <action
+            android:id="@+id/action_fragment_home_to_funcFragment"
+            app:destination="@id/funcFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_about"
+        android:name="com.robert.labb2.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" >
+        <action
+            android:id="@+id/action_aboutFragment_to_fragment_home"
+            app:destination="@id/fragment_home" />
+        <action
+            android:id="@+id/action_fragment_about_to_newsFragment"
+            app:destination="@id/newsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/funcFragment"
+        android:name="com.robert.labb2.FuncFragment"
+        android:label="fragment_func"
+        tools:layout="@layout/fragment_func" >
+        <action
+            android:id="@+id/action_funcFragment_to_fragment_home"
+            app:destination="@id/fragment_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="com.robert.labb2.NewsFragment"
+        android:label="fragment_news"
+        tools:layout="@layout/fragment_news" >
+        <action
+            android:id="@+id/action_newsFragment_to_fragment_about"
+            app:destination="@id/fragment_about" />
+    </fragment>
+</navigation>
